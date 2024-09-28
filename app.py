@@ -7,26 +7,31 @@ def determinar_cota(tipo_escola, renda_familiar, autodeclaracao, pcd):
     if pcd == "sim":
         if tipo_escola == "pública":
             if renda_familiar == "inferior":
-                return "Cota 8 - Pessoa com Deficiência, egressa de escola pública, com renda familiar inferior a 1 salário mínimo"
+                if autodeclaracao in ["negro", "preto", "pardo", "indígena", "quilombola"]:
+                    return "Cota 2 - PcD, escola pública, PPIQ, renda ≤ 1 salário mínimo"
+                else:
+                    return "Cota 4 - PcD, escola pública, renda ≤ 1 salário mínimo"
             else:
-                return "Cota 9 - Pessoa com Deficiência, egressa de escola pública, com renda familiar superior a 1 salário mínimo"
+                if autodeclaracao in ["negro", "preto", "pardo", "indígena", "quilombola"]:
+                    return "Cota 6 - PcD, escola pública, PPIQ, independente de renda"
+                else:
+                    return "Cota 8 - PcD, escola pública, independente de renda"
         else:
-            return "Cota 10 - Pessoa com Deficiência, independente de ter estudado em escola pública"
+            return "Cota 10 - PcD, acesso universal"
     else:
         if tipo_escola == "pública":
             if renda_familiar == "inferior":
                 if autodeclaracao in ["negro", "preto", "pardo", "indígena", "quilombola"]:
-                    return "Cota 4 - Pessoa negra/parda ou indígena com renda inferior a 1 salário mínimo"
+                    return "Cota 3 - Escola pública, PPIQ, renda ≤ 1 salário mínimo"
                 else:
-                    return "Cota 3 - Egresso de escola pública com renda inferior a 1 salário mínimo"
+                    return "Cota 5 - Escola pública, renda ≤ 1 salário mínimo"
             else:
-                if autodeclaracao in ["negro", "preto", "pardo"]:
-                    return "Cota 5 - Pessoa negra/parda com renda superior a 1 salário mínimo"
+                if autodeclaracao in ["negro", "preto", "pardo", "indígena", "quilombola"]:
+                    return "Cota 7 - Escola pública, PPIQ, independente de renda"
                 else:
-                    return "Cota 2 - Egresso de escola pública com renda superior a 1 salário mínimo"
+                    return "Cota 9 - Escola pública, independente de renda"
         else:
             return "Cota 1 - Acesso Universal"
-
 # Rota principal para exibir o formulário
 @app.route('/')
 def index():
