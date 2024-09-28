@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seleção de Cotas</title>
+  </head>
+  <body>
+    <h1>Sistema de Seleção de Cotas</h1>
+    <form action="/resultado" method="POST">
+      <label for="tipo_escola"
+        >Você estudou em escola pública ou privada?</label
+      >
+      <select name="tipo_escola" id="tipo_escola">
+        <option value="pública">Pública</option>
+        <option value="privada">Privada</option></select
+      ><br /><br />
+
+      <label for="renda_familiar"
+        >Sua renda familiar é superior ou inferior a 1 salário mínimo?</label
+      >
+      <select name="renda_familiar" id="renda_familiar">
+        <option value="superior">Superior</option>
+        <option value="inferior">Inferior</option></select
+      ><br /><br />
+
+      <label for="autodeclaracao">Você se autodeclara:</label>
+      <select name="autodeclaracao" id="autodeclaracao">
+        <option value="nenhuma">Nenhuma</option>
+        <option value="negro">Negro</option>
+        <option value="preto">Preto</option>
+        <option value="pardo">Pardo</option>
+        <option value="indígena">Indígena</option>
+        <option value="quilombola">Quilombola</option></select
+      ><br /><br />
+
+      <label for="pcd">Você possui alguma deficiência?</label>
+      <select name="pcd" id="pcd">
+        <option value="sim">Sim</option>
+        <option value="não">Não</option></select
+      ><br /><br />
+
+      <button type="submit">Calcular Cota</button>
+    </form>
+  </body>
+</html>
