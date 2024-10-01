@@ -4,15 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resultado da Cota</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
   </head>
   <body>
-    <h1>Resultado</h1>
-    <p>A cota correspondente é: {{ cota }}</p>
-    <p>O curso selecionado é: {{ curso }}</p>
-    <p>
-      O número de vagas disponíveis para sua cota no curso {{ curso }} é: {{
-      vagas }}
-    </p>
-    <a href="/">Calcular novamente</a>
+    <div class="container">
+      <h1 class="mt-5">Resultados</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cota:</td>
+            <td>{{ cota }}</td>
+          </tr>
+          <tr>
+            <td>Curso:</td>
+            <td>{{ curso }}</td>
+          </tr>
+          <tr>
+            <td>Vagas Disponíveis:</td>
+            <td>{{ vagas }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="/" class="btn btn-primary">Voltar</a>
+    </div>
   </body>
 </html>

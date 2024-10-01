@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seleção de Cotas</title>
   </head>
   <body>
+    <div class="form-group ml-2"></div>
     <h1>Sistema de Seleção de Cotas</h1>
-    <form action="/resultado" method="POST">
-      <!-- Selecione o curso -->
-      <label for="curso">Selecione o curso:</label>
-      <select name="curso" id="curso">
-        <option value="Técnico em Administração">
-          Técnico em Administração
-        </option>
-        <option value="Técnico em Informática">
-          Técnico em Informática
-        </option></select
-      ><br /><br />
-
-      <label for="tipo_escola"
-        >Você estudou em escola pública ou privada?</label
-      >
-      <select name="tipo_escola" id="tipo_escola">
-        <option value="pública">Pública</option>
-        <option value="privada">Privada</option></select
-      ><br /><br />
-
-      <label for="renda_familiar"
-        >Sua renda familiar é superior ou inferior a 1 salário mínimo?</label
-      >
-      <select name="renda_familiar" id="renda_familiar">
-        <option value="superior">Superior</option>
-        <option value="inferior">Inferior</option></select
-      ><br /><br />
-
-      <label for="autodeclaracao">Você se autodeclara:</label>
-      <select name="autodeclaracao" id="autodeclaracao">
-        <option value="nenhuma">Nenhuma</option>
-        <option value="negro">Negro</option>
-        <option value="preto">Preto</option>
-        <option value="pardo">Pardo</option>
-        <option value="indígena">Indígena</option>
-        <option value="quilombola">Quilombola</option></select
-      ><br /><br />
-
-      <label for="pcd">Você possui alguma deficiência?</label>
-      <select name="pcd" id="pcd">
-        <option value="sim">Sim</option>
-        <option value="não">Não</option></select
-      ><br /><br />
-      <button type="submit">Calcular Cota</button>
-    </form>
+    </div>
+    <div class="form-group ml-2">
+      <form method="POST" action="/resultado">
+        <div class="form-group">
+          <label for="curso">Curso:</label>
+          <select class="form-control w-auto" id="curso" name="curso">
+            <option>Técnico em Administração</option>
+            <option>Técnico em Informática</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="tipo_escola">Tipo de Escola:</label>
+          <select
+            class="form-control w-auto"
+            id="tipo_escola"
+            name="tipo_escola"
+          >
+            <option>pública</option>
+            <option>privada</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="renda_familiar">Renda Familiar:</label>
+          <select
+            class="form-control w-auto"
+            id="renda_familiar"
+            name="renda_familiar"
+          >
+            <option>inferior</option>
+            <option>superior</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="autodeclaracao">Autodeclaração:</label>
+          <select
+            class="form-control w-auto"
+            id="autodeclaracao"
+            name="autodeclaracao"
+          >
+            <option>nenhum</option>
+            <option>negro</option>
+            <option>preto</option>
+            <option>pardo</option>
+            <option>indígena</option>
+            <option>quilombola</option>
+            <!-- Adicione mais opções conforme necessário -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="pcd">Você é PcD?</label>
+          <select class="form-control w-auto" id="pcd" name="pcd">
+            <option>não</option>
+            <option>sim</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Calcular</button>
+      </form>
+    </div>
   </body>
 </html>
