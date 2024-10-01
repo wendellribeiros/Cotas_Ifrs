@@ -8,6 +8,17 @@
   <body>
     <h1>Sistema de Seleção de Cotas</h1>
     <form action="/resultado" method="POST">
+      <!-- Selecione o curso -->
+      <label for="curso">Selecione o curso:</label>
+      <select name="curso" id="curso">
+        <option value="Técnico em Administração">
+          Técnico em Administração
+        </option>
+        <option value="Técnico em Informática">
+          Técnico em Informática
+        </option></select
+      ><br /><br />
+
       <label for="tipo_escola"
         >Você estudou em escola pública ou privada?</label
       >
@@ -39,7 +50,6 @@
         <option value="sim">Sim</option>
         <option value="não">Não</option></select
       ><br /><br />
-
       <button type="submit">Calcular Cota</button>
     </form>
   </body>
