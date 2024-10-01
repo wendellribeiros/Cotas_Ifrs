@@ -4,11 +4,11 @@ app = Flask(__name__)
 # Definição de vagas
 vagas_disponiveis = {
     "Técnico em Administração": {
-        "Cota 2": 3, "Cota 3": 1, "Cota 4": 3, "Cota 5": 10, 
+        "Cota 2": 1, "Cota 3": 3, "Cota 4": 1, "Cota 5": 10, 
         "Cota 6": 1, "Cota 7": 3, "Cota 8": 1, "Cota 9": 10, "Cota 1": 27, "Cota 10": 3
     },
     "Técnico em Informática": {
-        "Cota 2": 3, "Cota 3": 1, "Cota 4": 3, "Cota 5": 10, 
+        "Cota 2": 1, "Cota 3": 3, "Cota 4": 1, "Cota 5": 10, 
         "Cota 6": 1, "Cota 7": 3, "Cota 8": 1, "Cota 9": 10, "Cota 1": 27, "Cota 10": 3
     }
 }
