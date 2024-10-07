@@ -10,6 +10,22 @@ vagas_disponiveis = {
     "Técnico em Informática": {
         "Cota 2": 1, "Cota 3": 3, "Cota 4": 1, "Cota 5": 10, 
         "Cota 6": 1, "Cota 7": 3, "Cota 8": 1, "Cota 9": 10, "Cota 1": 27, "Cota 10": 3
+    },
+    "Licenciatura em Letras – Português/Inglês": {
+        "Cota 2": 1, "Cota 3": 1, "Cota 4": 1, "Cota 5": 5, 
+        "Cota 6": 1, "Cota 7": 1, "Cota 8": 1, "Cota 9": 4, "Cota 1": 12, "Cota 10": 2
+    },
+    "Licenciatura em Matemática": {
+        "Cota 2": 1, "Cota 3": 1, "Cota 4": 1, "Cota 5": 5, 
+        "Cota 6": 1, "Cota 7": 1, "Cota 8": 1, "Cota 9": 4, "Cota 1": 12, "Cota 10": 2
+    },
+    "Tecnologia em Análise e Desenvolvimento de Sistemas": {
+        "Cota 2": 1, "Cota 3": 1, "Cota 4": 1, "Cota 5": 5, 
+        "Cota 6": 1, "Cota 7": 1, "Cota 8": 1, "Cota 9": 4, "Cota 1": 12, "Cota 10": 2
+    },
+    "Tecnologia em Processos Gerenciais": {
+        "Cota 2": 1, "Cota 3": 1, "Cota 4": 1, "Cota 5": 5, 
+        "Cota 6": 1, "Cota 7": 1, "Cota 8": 1, "Cota 9": 3, "Cota 1": 10, "Cota 10": 2
     }
 }
 
